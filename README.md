@@ -1,8 +1,10 @@
-# docker
+# Docker - Полный курс Docker
 
 
-## 1. [Создание образов Docker для Python приложения](https://github.com/donabilardo/docker/tree/lesson1)
+> Каждый урок выполнен в отдельной ветке, ссылки ниже
 
-## 2. [Создание образов Docker для Node.js приложения](https://github.com/donabilardo/docker/tree/lesson2)
+### 1. [Создание образов Docker для Python приложения](https://github.com/donabilardo/docker/tree/lesson1)
 
-## 3. [ Как запускать сервисы с помощью Docker Compose](https://github.com/donabilardo/docker/tree/lesson3)
+### 2. [Создание образов Docker для Node.js приложения](https://github.com/donabilardo/docker/tree/lesson2)
+
+### 3. [ Как запускать сервисы с помощью Docker Compose](https://github.com/donabilardo/docker/tree/lesson3)
