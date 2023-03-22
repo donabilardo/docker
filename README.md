@@ -1,41 +1,21 @@
 # Как запускать сервисы с помощью Docker Compose
 ---
 
-## Создаем файл Dockerfile
+## Установка Docker-compose
 
+Скачиваем скрипт:
 ```
-#какой образ будем использовать
-FROM node:alpine
-
-#создаём каталог внутри контейнера
-WORKDIR /app 
-
-#копируем необходимые файлы из текщего каталога в WORKDIR внутри контейнера
-COPY . .
-
-#Вызываем команду и передаём ей параметр
-CMD [ "node", "index.mjs" ]
+sudo curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+```
+Задаём разрешение на выполнение:
+```
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Собираем наш образ:
--t тег для создаваемого образа
-```
-docker build . -t my-text-file-creator
-```
+> Так же можно установить Docker-compose из репозитория ubuntu: sudo apt install docker-compose доступна стабильная версия, а так же snap пакет
 
-Создаём контейнер из созданного образа:
 
---rm удаление контейнера после завершения выполнения или остановки
 
--it запуск в интерактивном режиме, т.е. в запускаемой консоли
-
--d запуск в фоновом режиме
-
-```
-docker run --rm -it my-text-file-creator
-```
-
----
 
 ## Файловая структура контейнера
 
