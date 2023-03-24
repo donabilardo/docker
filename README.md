@@ -17,10 +17,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 
-## Файловая структура контейнера
+## Создаём docker-compose.yml
 
-Для доступа к файловой системе контейнера, нужно у работающего контейнера вызвать любую доспную оболочку, например sh
+```
 
-``
-docker exec -it {id или имя запущенного контейнера} sh (или /bin/bash)
-``
+version: '3'
+
+services:
+  app:
+    build: ./app
+  mongo:
+    image: mongo
+
+```
+
+Запускаем:
+```
+docker-compose up
+```
